@@ -53,4 +53,9 @@ Geraldke::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  root :to => 'home#index'
+
+  match '/index' => 'home#index', :via => :GET
+  match '/facebook_login' => 'home#facebook_login', :via => :GET
+  match '/login' => 'home#login', :via => :GET
 end

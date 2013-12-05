@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Geraldke::Application.config.secret_key_base = '130209ceb187bb031d2753dfbff9062361710b78a5beb696125399254dbc0bf6d5a72b9e7caa66e0a9f7260a813e0fb2d0950838a49e923c07a1ec24d8f2eb55'
+KoalaGist::Application.config.secret_key_base = '130209ceb187bb031d2753dfbff9062361710b78a5beb696125399254dbc0bf6d5a72b9e7caa66e0a9f7260a813e0fb2d0950838a49e923c07a1ec24d8f2eb55'

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Geraldke::Application.load_tasks
+KoalaGist::Application.load_tasks

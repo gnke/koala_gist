@@ -1,8 +1,5 @@
 class HomeController < ApplicationController
   def index
-  end
-
-  def facebook_login
     if params[:code]
       session[:access_token] = session[:oauth].get_access_token(params[:code])
     end
@@ -10,7 +7,10 @@ class HomeController < ApplicationController
     @api = Koala::Facebook::API.new(session[:access_token])
 
     begin
+      puts session[:access_token]
       @user_profile = @api.get_object("me")
+      friends = @api.get_connections("me", "friends")
+      puts friends
     rescue Exception=>ex
       puts ex.message
       redirect_to '/login' and return
